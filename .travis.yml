@@ -5,8 +5,10 @@ sudo: 'required'
 services:
   - docker
 env:
-  - version=test1
-  - version=test2
+  - version=maraidb
+  - version=memcached
+  - version=openlitespeed
+  - version=php-apache
     #- DOCKER_COMPOSE_VERSION=1.25.0
     
     #before_install:
@@ -21,7 +23,7 @@ env:
     #- sleep 10
 
 script:  
-  - docker build --tag larshagen/playground:$version $version
+  - $version/script.sh
     #- curl -Ik http://localhost:443/
     #after_success:
     #- echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
