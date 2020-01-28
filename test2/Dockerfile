@@ -1,3 +1,3 @@
 FROM ubuntu
 
-RUN apt-get update && apt-get install openlitespeed -y
+RUN apt-get update && wget -O - http://rpms.litespeedtech.com/debian/enable_lst_debain_repo.sh | bash && apt-get install openlitespeed -y
