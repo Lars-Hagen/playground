@@ -23,7 +23,8 @@ env:
     #- sleep 10
 
 script:  
-  - $version/script.sh
+  - $version/script.sh $version
+  - ls
     #- curl -Ik http://localhost:443/
     #after_success:
     #- echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
