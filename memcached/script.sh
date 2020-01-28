@@ -7,6 +7,6 @@ ID=$(docker run -d -p 11211:11211 larshagen/playground:$1)
 
 set -eux
 
-echo "statss settings" | nc -q 1 localhost 11211 | grep maxbytes
+echo "stats settings" | nc -q 1 localhost 11211 | grep maxbytes
 
 docker kill $ID
