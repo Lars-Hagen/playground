@@ -1,3 +1,3 @@
 FROM ubuntu
 
-RUN apt-get install openlitespeed -y
+RUN apt-get update && apt-get install openlitespeed -y
