@@ -22,7 +22,8 @@ env:
     #- docker image ls
     #- sleep 10
 
-script:  
+script:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - ls && cd $version && ls && ./script.sh $version 
     #- curl -Ik http://localhost:443/
     #after_success:

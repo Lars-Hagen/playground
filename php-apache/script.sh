@@ -10,3 +10,5 @@ set -eux
 curl -ik localhost
 
 docker kill $ID
+
+docker push larshagen/playground:$1

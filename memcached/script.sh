@@ -10,3 +10,5 @@ set -eux
 echo "stats settings" | nc -q 1 localhost 11211 | grep maxbytes
 
 docker kill $ID
+
+docker push larshagen/playground:$1
