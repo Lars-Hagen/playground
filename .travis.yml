@@ -25,7 +25,6 @@ env:
 script:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - ls && cd $version && ls && ./script.sh $version 
-    #- curl -Ik http://localhost:443/
     #after_success:
     #- echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
     #- docker push litespeedtech/openlitespeed-beta:1.6.5.lh
