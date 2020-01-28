@@ -1,0 +1,32 @@
+language: bash
+
+sudo: 'required'
+
+services:
+  - docker
+env:
+  - version=test1
+  - version=test2
+    #- DOCKER_COMPOSE_VERSION=1.25.0
+    
+    #before_install:
+    #- chmod +x ./.travis/main.sh
+    #- ./.travis/main.sh
+    #install:
+    #- docker build --tag litespeedtech/openlitespeed-beta:1.6.5.lh /litespeed/1.6.5.lh
+    #- docker build --tag litespeedtech/openlitespeed-beta:1.6.4.lh config/litespeed/1.6.4.lh
+    #- docker-compose up -d
+    #before_script:
+    #- docker image ls
+    #- sleep 10
+
+script:  
+  - docker build --tag larshagen/playground:$version $version
+    #- curl -Ik http://localhost:443/
+    #after_success:
+    #- echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
+    #- docker push litespeedtech/openlitespeed-beta:1.6.5.lh
+    #- docker push litespeedtech/openlitespeed-beta:1.6.4.lh
+    #after_script:
+    #- docker-compose stop
+    #- docker-compose rm -f
