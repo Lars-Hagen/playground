@@ -5,12 +5,12 @@ pipeline {
             parallel {
                 stage('Test On Windows') {
                     steps {
-                        docker build mariadb
+                        sh 'docker build mariadb'
                     }
                 }
                 stage('Test On Linux') {
                     steps {
-                        docker build openlitespeed
+                        sh 'docker build openlitespeed'
                     }
                 }
             }
