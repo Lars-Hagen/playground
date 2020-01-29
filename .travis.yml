@@ -9,6 +9,7 @@ env:
   - version=memcached
   - version=openlitespeed
   - version=php-apache
+  - version=openlitespeed-debain
     #- DOCKER_COMPOSE_VERSION=1.25.0
     
     #before_install:
