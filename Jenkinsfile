@@ -5,12 +5,12 @@ pipeline {
             parallel {
                 stage('Test On Windows') {
                     steps {
-                        echo "hello"
+                        docker build mariadb
                     }
                 }
                 stage('Test On Linux') {
                     steps {
-                        echo "hello2"
+                        docker build openlitespeed
                     }
                 }
             }
