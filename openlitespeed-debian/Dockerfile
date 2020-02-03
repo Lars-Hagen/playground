@@ -47,5 +47,6 @@ FROM debian:stretch-slim
 
 COPY --from=builder /usr/local/lsws/ /usr/local/lsws/
 COPY --from=builder /usr/bin/wp /usr/bin/wp
-
+COPY --from=builder /usr/lib/ /usr/lib/
+COPY --from=builder /lib/ /lib/
 CMD ["/usr/local/lsws/bin/openlitespeed","-n"]
